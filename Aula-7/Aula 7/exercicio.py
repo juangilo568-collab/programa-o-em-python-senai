@@ -1,0 +1,93 @@
+var  =  10
+lista  = [1,2,3]
+
+
+# inserir dados
+lista[1] = [1,0,0,5] # 1 dad0 ou lista
+lista.append(10) # inserir no final da lista, um valor ou lista
+lista.insert(0,150) # inserir no indice indicado
+lista.extend([1,2,3,5,5,6,4,5,5]) # inserir varios dados de uma vez  ou lista
+lista += (1,5,6,6,98,6)# inserir varios dados de uma vez  ou lista
+
+
+
+# deletar dados
+lista.remove(150) # remove a partir do dado que vc vê 
+lista.pop() # remove o último valor
+lista.pop(0) # remove o valor que esta posicionado no indice declado
+del lista[0] #deletando a partir do indice
+# slice -  fatiar 
+del lista[0:7]
+#    start : stop 
+lista_2 =  lista[0:7]
+
+
+
+# verifica 
+print(len(lista))# tamanho
+print(min(lista))# menor
+print(max(lista))# maior
+# lista.sort(reverse=True)
+lista.reverse()
+print(lista)
+
+
+
+
+lista3 = list(range(1,251))
+
+
+print(lista3)
+
+
+
+
+produtos = ['','uva','pera','maçã','banana']
+valores = [0,10.50,5.0,15.25,10.0]
+carrinho = []
+total = []
+
+produ0 = int(input(f''' 
+                       escolha um a partir do indice:  
+{produtos[1]} - {produtos.index(produtos[1])} - R$ {valores[1]}
+{produtos[2]} - {produtos.index(produtos[2])} - R$ {valores[2]}
+{produtos[3]} - {produtos.index(produtos[3])} - R$ {valores[3]}
+{produtos[4]} - {produtos.index(produtos[4])} - R$ {valores[4]}
+
+
+
+'''))
+
+carrinho.append(produtos[produ0])
+total.append(valores[produ0])
+produ1 = int(input(f''' 
+                       escolha um a partir do indice:  
+{produtos[1]} - {produtos.index(produtos[1])} - R$ {valores[1]}
+{produtos[2]} - {produtos.index(produtos[2])} - R$ {valores[2]}
+{produtos[3]} - {produtos.index(produtos[3])} - R$ {valores[3]}
+{produtos[4]} - {produtos.index(produtos[4])} - R$ {valores[4]}
+
+
+
+'''))
+carrinho.append(produtos[produ1])
+total.append(valores[produ1])
+produ2 = int(input(f''' 
+                       escolha um a partir do indice:  
+{produtos[1]} - {produtos.index(produtos[1])} - R$ {valores[1]}
+{produtos[2]} - {produtos.index(produtos[2])} - R$ {valores[2]}
+{produtos[3]} - {produtos.index(produtos[3])} - R$ {valores[3]}
+{produtos[4]} - {produtos.index(produtos[4])} - R$ {valores[4]}
+
+
+'''))
+carrinho.append(produtos[produ2])
+total.append(valores[produ2])
+
+
+print('Carrinho', carrinho)
+
+print('R$', sum(total))
+
+
+
