@@ -1,0 +1,37 @@
+
+import pygame
+
+pygame.init()
+
+
+tela  =  pygame.display.set_mode([500,500])
+pygame.display.set_caption("TESTANDO PYGAME")
+#cir  =  draw.Circle(tela, 'yellow',(250,250), 100)
+clock =  pygame.time.Clock()
+run =  True
+while run:
+    for evento  in pygame.event.get():
+        if evento.type  == pygame.QUIT: 
+            run = False
+        tela.fill('blue')
+    
+        cir  =  pygame.draw.circle(tela, 'yellow',(250,250), 100)
+        if evento.type == pygame.KEYDOWN:
+            if evento.key == pygame.K_RIGHT:
+                pygame.draw.rect(tela, 'white',(350,100,50,50))
+                cir.x  =  cir.x  + 20
+            if evento.key == pygame.K_LEFT:
+                pygame.draw.rect(tela, 'green',(150,100,50,50)) 
+            if evento.key == pygame.K_DOWN:
+                pygame.draw.rect(tela, 'purple',(30,350,50,50))       
+            if evento.key == pygame.K_UP:
+                pygame.draw.rect(tela, 'yellow',(380,400,50,50)) 
+
+
+
+
+    # keys = pygame.key.get_pressed()
+    # if keys['K_RIGHT ']:
+    #    pass
+    pygame.display.update()   
+    
